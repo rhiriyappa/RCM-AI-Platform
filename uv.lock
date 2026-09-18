@@ -2275,7 +2275,7 @@ wheels = [
 ]
 
 [[package]]
-name = "one-call-ai-platform"
+name = "RCM-AI_Platform"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [

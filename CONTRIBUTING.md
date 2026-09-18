@@ -2,7 +2,7 @@
 
 ## Quick start
 ```bash
-git clone <repo> && cd one-call-ai-platform
+git clone <repo> && cd RCM-AI_Platform
 cp .env.example .env
 pip install -e ".[dev]"
 docker compose up -d

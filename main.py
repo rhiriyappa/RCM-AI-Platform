@@ -1,5 +1,5 @@
 def main():
-    print("Hello from one-call-ai-platform!")
+    print("Hello from RCM-AI_Platform!")
 
 
 if __name__ == "__main__":
