@@ -1,8 +1,9 @@
 """tests/classification/test_embeddings.py"""
 import pytest
-from contracts.schemas import DocumentType
+
 from classification.embeddings import EmbeddingClassifier
 from classification.training_data import get_training_texts_and_labels
+from contracts.schemas import DocumentType
 
 
 @pytest.fixture(scope="module")
@@ -22,7 +23,8 @@ class TestTraining:
         assert c.is_trained
 
     def test_raises_before_training(self):
-        with pytest.raises(RuntimeError): EmbeddingClassifier().predict("text")
+        with pytest.raises(RuntimeError):
+            EmbeddingClassifier().predict("text")
 
 
 class TestPrediction:
@@ -51,11 +53,12 @@ class TestPersistence:
     def test_save_load(self, clf, tmp_path):
         p = tmp_path / "model.pkl"
         clf.save(p)
-        l = EmbeddingClassifier()
-        l.load(p)
+        loaded_clf = EmbeddingClassifier()
+        loaded_clf.load(p)
         orig, _ = clf.predict("Claim denied CO-4.")
-        loaded, _ = l.predict("Claim denied CO-4.")
+        loaded, _ = loaded_clf.predict("Claim denied CO-4.")
         assert orig == loaded
 
     def test_load_missing_raises(self):
-        with pytest.raises(FileNotFoundError): EmbeddingClassifier().load("/nope/model.pkl")
+        with pytest.raises(FileNotFoundError):
+            EmbeddingClassifier().load("/nope/model.pkl")

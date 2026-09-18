@@ -1,5 +1,6 @@
 """tests/conftest.py — shared fixtures and AWS environment setup."""
 import os
+
 import pytest
 
 os.environ.setdefault("AWS_ACCESS_KEY_ID", "test")

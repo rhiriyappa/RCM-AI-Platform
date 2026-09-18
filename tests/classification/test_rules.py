@@ -1,7 +1,6 @@
 """tests/classification/test_rules.py"""
-import pytest
-from contracts.schemas import DocumentType
 from classification.rules import apply_rules
+from contracts.schemas import DocumentType
 
 
 class TestDenialRules:

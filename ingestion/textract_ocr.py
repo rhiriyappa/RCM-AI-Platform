@@ -1,7 +1,10 @@
 """ingestion/textract_ocr.py — async Textract OCR with confidence filtering."""
 from __future__ import annotations
-import logging, time
+
+import logging
+import time
 from dataclasses import dataclass, field
+
 import boto3
 
 logger = logging.getLogger(__name__)

@@ -1,8 +1,10 @@
 """agents/base.py — base agent class for all LangGraph-style agents."""
 from __future__ import annotations
-import logging, time, uuid
-from datetime import datetime, timezone
-from typing import Any, Callable
+
+import logging
+from datetime import UTC, datetime
+from typing import Any
+
 from contracts.schemas import AgentState, AgentStatus
 
 logger = logging.getLogger(__name__)
@@ -24,7 +26,7 @@ class BaseAgent:
     def _audit(self, state: AgentState, node: str, detail: dict[str, Any]) -> AgentState:
         trail = list(state.audit_trail)
         trail.append({"node": node, "agent": self.agent_name,
-                      "ts": datetime.now(timezone.utc).isoformat(), **detail})
+                      "ts": datetime.now(UTC).isoformat(), **detail})
         return state.model_copy(update={"audit_trail": trail})
 
     def _hitl_gate(self, state: AgentState, reason: str) -> AgentState:

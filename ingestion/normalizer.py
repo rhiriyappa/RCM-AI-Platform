@@ -1,8 +1,10 @@
 """ingestion/normalizer.py — maps every source format to canonical RawDocument."""
 from __future__ import annotations
+
 import uuid
-from datetime import datetime, timezone
-from typing import Any, Optional
+from datetime import UTC, datetime
+from typing import Any
+
 from contracts.schemas import DocumentType, RawDocument, SourceType
 from ingestion.adapters import RawPayload
 from ingestion.format_parsers import EDI837Parser, FHIRR4Parser, HL7V2Parser
@@ -14,13 +16,13 @@ class Normalizer:
     _fhir = FHIRR4Parser()
     _edi  = EDI837Parser()
 
-    def normalize(self, payload: RawPayload, ocr_result: Optional[OCRResult] = None) -> RawDocument:
+    def normalize(self, payload: RawPayload, ocr_result: OCRResult | None = None) -> RawDocument:
         extracted = self._extract_structured(payload)
         full_text = ocr_result.full_text if ocr_result else payload.raw_bytes.decode("utf-8", errors="replace")
         return RawDocument(
             document_id=str(uuid.uuid4()), source_id=payload.source_id,
             source_type=payload.source_type, document_type=DocumentType.UNKNOWN,
-            ingested_at=datetime.now(timezone.utc), full_text=full_text,
+            ingested_at=datetime.now(UTC), full_text=full_text,
             page_count=len(ocr_result.page_texts) if ocr_result else 1,
             ocr_mean_confidence=ocr_result.mean_confidence if ocr_result else None,
             patient_name=extracted.get("patient_name", ""),

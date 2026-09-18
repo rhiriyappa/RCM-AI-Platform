@@ -1,9 +1,13 @@
 """ingestion/api.py — FastAPI ingestor service."""
 from __future__ import annotations
-import os, uuid
+
+import os
+import uuid
+
 import structlog
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+
 from ingestion.adapters import EDI837Adapter, FHIRBundleAdapter, WebhookAdapter
 from ingestion.normalizer import Normalizer
 from ingestion.sqs_fanout import SQSFanout

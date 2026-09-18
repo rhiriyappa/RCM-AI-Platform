@@ -1,8 +1,10 @@
 """orchestration/fallback.py — fallback chain: LLM → rules → human escalation."""
 from __future__ import annotations
+
 import logging
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable, Optional
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -17,8 +19,8 @@ class FallbackResult:
 
 def with_fallback(
     llm_fn:    Callable[[], Any],
-    rules_fn:  Optional[Callable[[], Any]] = None,
-    escalate_fn: Optional[Callable[[], Any]] = None,
+    rules_fn:  Callable[[], Any] | None = None,
+    escalate_fn: Callable[[], Any] | None = None,
     min_confidence: float = 0.55,
 ) -> FallbackResult:
     """

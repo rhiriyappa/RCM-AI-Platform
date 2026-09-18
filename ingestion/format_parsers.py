@@ -1,6 +1,8 @@
 """ingestion/format_parsers.py — HL7 v2, FHIR R4, EDI 837 parsers."""
 from __future__ import annotations
-import json, re
+
+import json
+import re
 from typing import Any
 
 
@@ -23,8 +25,10 @@ class HL7V2Parser:
             "payer_id": self._g(in1, 3), "raw_segments": segments,
         }
     def _g(self, seg: list[str], idx: int) -> str:
-        try: return seg[idx].strip()
-        except IndexError: return ""
+        try:
+            return seg[idx].strip()
+        except IndexError:
+            return ""
 
 
 class FHIRR4Parser:
@@ -65,15 +69,17 @@ class EDI837Parser:
         seg_map: dict[str, list] = {}
         for s in segs:
             seg_map.setdefault(s[0], []).append(s)
-        nm1 = next((s for s in seg_map.get("NM1", []) if len(s) > 1 and s[1] == "QC"), [])
+        nm1: list = next((s for s in seg_map.get("NM1", []) if len(s) > 1 and s[1] == "QC"), [])
         hi  = [e.replace("ABK:", "").replace("ABF:", "") for s in seg_map.get("HI", []) for e in s[1:] if e]
         sv1 = [s[1].split(":")[1] if ":" in s[1] else s[1] for s in seg_map.get("SV1", []) if len(s) > 1]
-        ref = next((s for s in seg_map.get("REF", []) if len(s) > 1 and s[1] == "2U"), [])
+        ref: list = next((s for s in seg_map.get("REF", []) if len(s) > 1 and s[1] == "2U"), [])
         return {
             "patient_name": " ".join(filter(None, [self._g(nm1, 4), self._g(nm1, 5)])),
             "patient_dob": "", "patient_id": self._g(nm1, 9),
             "diagnosis_codes": hi, "procedure_codes": sv1, "payer_id": self._g(ref, 2),
         }
     def _g(self, seg: list, idx: int) -> str:
-        try: return seg[idx].strip()
-        except IndexError: return ""
+        try:
+            return seg[idx].strip()
+        except IndexError:
+            return ""

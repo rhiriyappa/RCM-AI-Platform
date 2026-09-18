@@ -1,10 +1,12 @@
 """tests/ingestion/test_normalizer.py"""
+
 import pytest
-from datetime import datetime, timezone
-from contracts.schemas import DocumentType, SourceType
+
+from contracts.schemas import DocumentType
 from ingestion.adapters import FHIRBundleAdapter, WebhookAdapter
 from ingestion.normalizer import Normalizer
 from ingestion.textract_ocr import OCRResult
+
 
 @pytest.fixture
 def bundle():

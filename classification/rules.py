@@ -1,7 +1,9 @@
 """classification/rules.py — deterministic rule-based pre-classifier (Tier 1)."""
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass
+
 from contracts.schemas import DocumentType
 
 

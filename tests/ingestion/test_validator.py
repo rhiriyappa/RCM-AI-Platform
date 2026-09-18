@@ -1,12 +1,13 @@
 """tests/ingestion/test_validator.py"""
-import pytest
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+
 from contracts.schemas import RawDocument, SourceType
-from ingestion.validator import DocumentValidator, MIN_OCR_CONFIDENCE
+from ingestion.validator import MIN_OCR_CONFIDENCE, DocumentValidator
+
 
 def doc(**kw):
     defaults = dict(document_id="d1", source_id="s1", source_type=SourceType.FHIR_R4,
-                    ingested_at=datetime.now(timezone.utc),
+                    ingested_at=datetime.now(UTC),
                     full_text="Patient Jane Smith. Diagnosis M54.5. Provider Dr. Jones.")
     defaults.update(kw)
     return RawDocument(**defaults)

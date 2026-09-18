@@ -1,11 +1,10 @@
 """tests/extraction/test_enrichment.py"""
 import json
-import pytest
-from datetime import datetime
-from contracts.schemas import DocumentType, ExtractionResult, ExtractedField
+
+from contracts.schemas import DocumentType, ExtractionResult
+from extraction.confidence import apply_ocr_penalty, score_completeness
 from extraction.enrichment import CodeValidator, ExtractionEnricher, MockNPILookup
 from extraction.parser import parse_llm_output
-from extraction.confidence import apply_ocr_penalty, score_completeness
 
 
 def make_result(data: dict, doc_type=DocumentType.DENIAL_EOB) -> ExtractionResult:

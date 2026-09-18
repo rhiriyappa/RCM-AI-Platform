@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from enum import StrEnum
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -47,7 +47,7 @@ class RawDocument(BaseModel):
     ingested_at:         datetime
     full_text:           str           = ""
     page_count:          int           = Field(default=1, ge=1)
-    ocr_mean_confidence: Optional[float] = None
+    ocr_mean_confidence: float | None = None
     patient_name:        str           = ""
     patient_dob:         str           = ""
     patient_id:          str           = ""
@@ -75,8 +75,8 @@ class ClassificationResult(BaseModel):
     document_id:    str
     document_type:  DocumentType
     confidence:     float              = Field(ge=0.0, le=1.0)
-    runner_up_type: Optional[DocumentType] = None
-    runner_up_conf: Optional[float]    = None
+    runner_up_type: DocumentType | None = None
+    runner_up_conf: float | None    = None
     method:         str                = "ensemble"
     routing_queue:  str                = ""
 
@@ -86,8 +86,8 @@ class ExtractedField(BaseModel):
     value:       Any
     confidence:  float              = Field(ge=0.0, le=1.0)
     source:      str                = "llm"
-    page_ref:    Optional[int]      = None
-    char_span:   Optional[tuple[int, int]] = None
+    page_ref:    int | None      = None
+    char_span:   tuple[int, int] | None = None
 
 
 class ExtractionResult(BaseModel):
@@ -97,29 +97,29 @@ class ExtractionResult(BaseModel):
     document_type:  DocumentType
     extracted_at:   datetime
 
-    patient_name:   Optional[ExtractedField] = None
-    patient_dob:    Optional[ExtractedField] = None
-    patient_id:     Optional[ExtractedField] = None
-    member_id:      Optional[ExtractedField] = None
-    provider_name:  Optional[ExtractedField] = None
-    provider_npi:   Optional[ExtractedField] = None
+    patient_name:   ExtractedField | None = None
+    patient_dob:    ExtractedField | None = None
+    patient_id:     ExtractedField | None = None
+    member_id:      ExtractedField | None = None
+    provider_name:  ExtractedField | None = None
+    provider_npi:   ExtractedField | None = None
 
     diagnosis_codes:  list[ExtractedField]   = Field(default_factory=list)
     procedure_codes:  list[ExtractedField]   = Field(default_factory=list)
-    service_date:     Optional[ExtractedField] = None
-    place_of_service: Optional[ExtractedField] = None
+    service_date:     ExtractedField | None = None
+    place_of_service: ExtractedField | None = None
 
-    payer_id:         Optional[ExtractedField] = None
-    payer_name:       Optional[ExtractedField] = None
-    claim_number:     Optional[ExtractedField] = None
-    total_charge:     Optional[ExtractedField] = None
+    payer_id:         ExtractedField | None = None
+    payer_name:       ExtractedField | None = None
+    claim_number:     ExtractedField | None = None
+    total_charge:     ExtractedField | None = None
 
     denial_reason_codes: list[ExtractedField] = Field(default_factory=list)
-    denial_date:      Optional[ExtractedField] = None
-    appeal_deadline:  Optional[ExtractedField] = None
+    denial_date:      ExtractedField | None = None
+    appeal_deadline:  ExtractedField | None = None
 
-    auth_number:      Optional[ExtractedField] = None
-    auth_status:      Optional[ExtractedField] = None
+    auth_number:      ExtractedField | None = None
+    auth_status:      ExtractedField | None = None
 
     mean_confidence:      float      = 0.0
     low_conf_fields:      list[str]  = Field(default_factory=list)
@@ -134,7 +134,7 @@ class ExtractionResult(BaseModel):
 class PromptTemplate(BaseModel):
     name:         str
     version:      str
-    document_type: Optional[DocumentType] = None
+    document_type: DocumentType | None = None
     system:       str
     user_template: str
     model:        str   = "claude-sonnet-4-20250514"
@@ -153,7 +153,7 @@ class ModelCallRecord(BaseModel):
     latency_ms:    float
     cost_usd:      float
     success:       bool
-    error:         Optional[str] = None
+    error:         str | None = None
     called_at:     datetime
 
 
@@ -163,8 +163,8 @@ class AgentState(BaseModel):
     """Shared state passed through all LangGraph agent nodes."""
     document_id:   str
     document_type: DocumentType
-    raw_doc:       Optional[dict[str, Any]] = None
-    extraction:    Optional[dict[str, Any]] = None
+    raw_doc:       dict[str, Any] | None = None
+    extraction:    dict[str, Any] | None = None
     status:        AgentStatus = AgentStatus.PENDING
     hitl_required: bool        = False
     hitl_reason:   str         = ""

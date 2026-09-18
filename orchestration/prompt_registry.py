@@ -1,9 +1,11 @@
 """orchestration/prompt_registry.py — versioned prompt management."""
 from __future__ import annotations
-import json, logging
+
+import json
+import logging
 from pathlib import Path
-from typing import Optional
-from contracts.schemas import DocumentType, PromptTemplate
+
+from contracts.schemas import PromptTemplate
 
 logger = logging.getLogger(__name__)
 
@@ -19,10 +21,11 @@ class PromptRegistry:
         self._store[key] = template
         logger.info("Registered prompt %s", key)
 
-    def get(self, name: str, version: str = "latest") -> Optional[PromptTemplate]:
+    def get(self, name: str, version: str = "latest") -> PromptTemplate | None:
         if version == "latest":
             matching = [(k, v) for k, v in self._store.items() if k.startswith(f"{name}:")]
-            if not matching: return None
+            if not matching:
+                return None
             return sorted(matching, key=lambda x: x[0])[-1][1]
         return self._store.get(f"{name}:{version}")
 

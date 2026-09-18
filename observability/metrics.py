@@ -1,8 +1,12 @@
 """observability/metrics.py — inference metrics and cost tracking."""
 from __future__ import annotations
-import logging, time, uuid
-from datetime import datetime, timezone
-from typing import Any, Callable
+
+import logging
+import time
+import uuid
+from collections.abc import Callable
+from datetime import UTC, datetime
+
 from contracts.schemas import ModelCallRecord
 
 logger = logging.getLogger(__name__)
@@ -33,7 +37,7 @@ def record_call(
         input_tokens=input_tokens, output_tokens=output_tokens,
         latency_ms=round(latency_ms, 2),
         cost_usd=estimate_cost(model, input_tokens, output_tokens),
-        success=success, error=error, called_at=datetime.now(timezone.utc),
+        success=success, error=error, called_at=datetime.now(UTC),
     )
     logger.info("LLM call recorded: %s model=%s tokens=%d+%d cost=$%.5f latency=%.0fms",
                 record.call_id, model, input_tokens, output_tokens,

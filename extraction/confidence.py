@@ -1,16 +1,17 @@
 """extraction/confidence.py — OCR penalty and completeness scoring."""
 from __future__ import annotations
-from typing import Optional
+
 from contracts.schemas import ExtractedField, ExtractionResult
 
 
-def apply_ocr_penalty(result: ExtractionResult, ocr_mean_confidence: Optional[float]) -> ExtractionResult:
+def apply_ocr_penalty(result: ExtractionResult, ocr_mean_confidence: float | None) -> ExtractionResult:
     if ocr_mean_confidence is None or ocr_mean_confidence >= 85.0:
         return result
     penalty = max(0.0, (85.0 - ocr_mean_confidence) / 85.0) * 0.25
 
-    def adj(f: Optional[ExtractedField]) -> Optional[ExtractedField]:
-        if f is None: return None
+    def adj(f: ExtractedField | None) -> ExtractedField | None:
+        if f is None:
+            return None
         d = f.model_dump()
         d["confidence"] = round(max(0.0, d["confidence"] - penalty), 4)
         return ExtractedField(**d)

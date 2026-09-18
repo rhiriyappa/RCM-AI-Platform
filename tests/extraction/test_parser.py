@@ -1,5 +1,6 @@
 """tests/extraction/test_parser.py"""
-import json, pytest
+import json
+
 from contracts.schemas import DocumentType
 from extraction.parser import parse_llm_output
 

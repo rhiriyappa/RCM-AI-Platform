@@ -1,9 +1,8 @@
 """tests/agents/test_agents.py"""
-import pytest
-from contracts.schemas import AgentState, AgentStatus, DocumentType
+from agents.denial import DenialAppealAgent
 from agents.prior_auth import PriorAuthAgent
-from agents.denial     import DenialAppealAgent
-from agents.triage     import ReferralTriageAgent
+from agents.triage import ReferralTriageAgent
+from contracts.schemas import AgentState, AgentStatus, DocumentType
 
 
 def make_state(doc_type=DocumentType.DENIAL_EOB, extraction=None, doc_id="ag-001"):

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """scripts/run_eval.py — run extraction eval against gold JSONL."""
-import argparse, json, sys
+import argparse
+import json
+import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -32,7 +34,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gold-set", required=True)
     args = ap.parse_args()
-    records = [json.loads(l) for l in Path(args.gold_set).read_text().splitlines() if l.strip()]
+    records = [json.loads(line) for line in Path(args.gold_set).read_text().splitlines() if line.strip()]
     results = [eval_record(r) for r in records]
     scores  = [r["score"] for r in results if "score" in r]
     mean    = sum(scores) / len(scores) if scores else 0.0

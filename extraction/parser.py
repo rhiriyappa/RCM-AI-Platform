@@ -1,8 +1,12 @@
 """extraction/parser.py — parse LLM JSON output → ExtractionResult."""
 from __future__ import annotations
-import json, logging, re
-from datetime import datetime, timezone
-from typing import Any, Optional
+
+import json
+import logging
+import re
+from datetime import UTC, datetime
+from typing import Any
+
 from contracts.schemas import DocumentType, ExtractedField, ExtractionResult
 
 logger = logging.getLogger(__name__)
@@ -20,7 +24,7 @@ def parse_llm_output(raw: str, document_id: str, document_type: DocumentType) ->
         data = json.loads(m.group()) if m else {}
         warnings.append("could not parse LLM JSON response")
 
-    fields:      dict[str, Optional[ExtractedField]] = {}
+    fields:      dict[str, ExtractedField | None] = {}
     code_fields: dict[str, list[ExtractedField]] = {k: [] for k in _CODE_FIELDS}
 
     for key, raw_val in data.items():
@@ -36,7 +40,7 @@ def parse_llm_output(raw: str, document_id: str, document_type: DocumentType) ->
 
     return ExtractionResult(
         document_id=document_id, document_type=document_type,
-        extracted_at=datetime.now(timezone.utc),
+        extracted_at=datetime.now(UTC),
         patient_name=fields.get("patient_name"), patient_dob=fields.get("patient_dob"),
         patient_id=fields.get("patient_id"), member_id=fields.get("member_id"),
         provider_name=fields.get("provider_name"), provider_npi=fields.get("provider_npi"),
@@ -52,16 +56,23 @@ def parse_llm_output(raw: str, document_id: str, document_type: DocumentType) ->
     )
 
 
-def _parse_field(key: str, raw: Any) -> Optional[ExtractedField]:
-    if raw is None: return None
+def _parse_field(key: str, raw: Any) -> ExtractedField | None:
+    if raw is None:
+        return None
     if isinstance(raw, dict):
-        value = raw.get("value"); conf = float(raw.get("confidence", 0.8)); src = str(raw.get("source", "llm"))
+        value = raw.get("value")
+        conf = float(raw.get("confidence", 0.8))
+        src = str(raw.get("source", "llm"))
     else:
-        value = raw; conf = 0.75; src = "llm"
-    if value is None or value == "": return None
+        value = raw
+        conf = 0.75
+        src = "llm"
+    if value is None or value == "":
+        return None
     return ExtractedField(field_name=key, value=value, confidence=min(1.0, max(0.0, conf)), source=src)
 
 
 def _parse_list(raw: Any, field_name: str) -> list[ExtractedField]:
-    if not raw or not isinstance(raw, list): return []
+    if not raw or not isinstance(raw, list):
+        return []
     return [f for item in raw if (f := _parse_field(field_name, item)) is not None]

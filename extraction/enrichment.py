@@ -1,7 +1,9 @@
 """extraction/enrichment.py — NPI lookup, code validation, payer normalisation."""
 from __future__ import annotations
-import logging, re
-from typing import Optional
+
+import logging
+import re
+
 from contracts.schemas import ExtractionResult
 
 logger = logging.getLogger(__name__)
@@ -9,7 +11,7 @@ _NPI_RE = re.compile(r"^\d{10}$")
 
 
 class NPILookup:
-    def lookup(self, npi: str) -> Optional[dict]: raise NotImplementedError
+    def lookup(self, npi: str) -> dict | None: raise NotImplementedError
 
 
 class MockNPILookup(NPILookup):
@@ -17,7 +19,7 @@ class MockNPILookup(NPILookup):
         "1234567890": {"npi": "1234567890", "name": "Dr. Jane Smith",  "taxonomy": "207Q00000X", "state": "TX"},
         "9876543210": {"npi": "9876543210", "name": "Dr. Robert Jones","taxonomy": "208D00000X", "state": "CA"},
     }
-    def lookup(self, npi: str) -> Optional[dict]: return self._KNOWN.get(npi)
+    def lookup(self, npi: str) -> dict | None: return self._KNOWN.get(npi)
 
 
 class CodeValidator:
@@ -31,7 +33,8 @@ class CodeValidator:
 
 class ExtractionEnricher:
     def __init__(self, npi_lookup: NPILookup, code_validator: CodeValidator) -> None:
-        self._npi = npi_lookup; self._codes = code_validator
+        self._npi = npi_lookup
+        self._codes = code_validator
 
     def enrich(self, result: ExtractionResult) -> ExtractionResult:
         kwargs = result.model_dump()
@@ -46,10 +49,12 @@ class ExtractionEnricher:
         codes_validated = True
         for f in result.diagnosis_codes:
             if not self._codes.validate_icd10(str(f.value)):
-                warnings.append(f"ICD-10 not in reference table: {f.value}"); codes_validated = False
+                warnings.append(f"ICD-10 not in reference table: {f.value}")
+                codes_validated = False
         for f in result.procedure_codes:
             if not self._codes.validate_cpt(str(f.value)):
-                warnings.append(f"CPT not in reference table: {f.value}"); codes_validated = False
+                warnings.append(f"CPT not in reference table: {f.value}")
+                codes_validated = False
         kwargs["codes_validated"] = codes_validated
         kwargs["extraction_warnings"] = warnings
         return ExtractionResult(**kwargs)

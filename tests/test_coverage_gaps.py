@@ -8,11 +8,11 @@ Targeted coverage tests for modules that were not fully exercised:
   - ingestion/textract_ocr.py
   - orchestration/prompt_registry.py (load_from_dir)
 """
-import json, pytest
-from datetime import datetime, timezone
-from pathlib import Path
-from unittest.mock import MagicMock, patch, call
+import json
+from datetime import UTC, datetime
+from unittest.mock import MagicMock
 
+import pytest
 
 # ── observability/metrics.py ────────────────────────────────────────────────
 
@@ -223,7 +223,7 @@ class TestSQSFanout:
         return RawDocument(
             document_id="doc-001", source_id="s1",
             source_type=SourceType.FHIR_R4, document_type=DocumentType.DENIAL_EOB,
-            ingested_at=datetime.now(timezone.utc),
+            ingested_at=datetime.now(UTC),
             full_text="Claim denied CO-4. Patient Jane Smith.",
         )
 

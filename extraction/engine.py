@@ -1,12 +1,15 @@
 """extraction/engine.py — LLM extraction orchestrator."""
 from __future__ import annotations
-import logging, time
-from datetime import datetime, timezone
-from typing import Callable
+
+import logging
+import time
+from collections.abc import Callable
+from datetime import UTC, datetime
+
 from contracts.schemas import ClassificationResult, DocumentType, ExtractionResult, RawDocument
-from extraction.prompts    import get_extraction_prompt, get_user_message
-from extraction.parser     import parse_llm_output
 from extraction.enrichment import ExtractionEnricher
+from extraction.parser import parse_llm_output
+from extraction.prompts import get_extraction_prompt, get_user_message
 
 logger = logging.getLogger(__name__)
 HUMAN_REVIEW_THRESHOLD = 0.55
@@ -14,7 +17,8 @@ HUMAN_REVIEW_THRESHOLD = 0.55
 
 class ExtractionEngine:
     def __init__(self, call_llm: Callable[[str, str], str], enricher: ExtractionEnricher) -> None:
-        self._call_llm = call_llm; self._enricher = enricher
+        self._call_llm = call_llm
+        self._enricher = enricher
 
     def extract(self, doc: RawDocument, classification: ClassificationResult) -> ExtractionResult:
         t0 = time.perf_counter()
@@ -37,5 +41,5 @@ class ExtractionEngine:
     @staticmethod
     def _empty(document_id: str, document_type: DocumentType, error: str) -> ExtractionResult:
         return ExtractionResult(document_id=document_id, document_type=document_type,
-                                extracted_at=datetime.now(timezone.utc),
+                                extracted_at=datetime.now(UTC),
                                 mean_confidence=0.0, extraction_warnings=[f"extraction_error: {error}"])

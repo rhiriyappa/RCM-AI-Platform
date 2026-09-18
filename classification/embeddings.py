@@ -1,13 +1,16 @@
 """classification/embeddings.py — TF-IDF + Logistic Regression classifier (Tier 2)."""
 from __future__ import annotations
-import logging, pickle
+
+import logging
+import pickle
 from pathlib import Path
-from typing import Optional
+
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
+
 from contracts.schemas import DocumentType
 
 logger = logging.getLogger(__name__)
@@ -17,8 +20,8 @@ class EmbeddingClassifier:
     CONFIDENCE_FLOOR = 0.40
 
     def __init__(self) -> None:
-        self._pipeline: Optional[Pipeline] = None
-        self._le: Optional[LabelEncoder]   = None
+        self._pipeline: Pipeline | None = None
+        self._le: LabelEncoder | None   = None
         self._trained: bool = False
 
     def train(self, texts: list[str], labels: list[str]) -> None:
@@ -45,15 +48,15 @@ class EmbeddingClassifier:
             return DocumentType.UNKNOWN, top_conf
         return DocumentType(top_lbl), round(top_conf, 4)
 
-    def predict_top2(self, text: str) -> tuple[DocumentType, float, Optional[DocumentType], Optional[float]]:
+    def predict_top2(self, text: str) -> tuple[DocumentType, float, DocumentType | None, float | None]:
         if not self._trained or self._pipeline is None or self._le is None:
             raise RuntimeError("Not trained")
         proba      = self._pipeline.predict_proba([text])[0]
         sorted_idx = np.argsort(proba)[::-1]
         top_lbl    = DocumentType(self._le.inverse_transform([int(sorted_idx[0])])[0])
         top_conf   = round(float(proba[sorted_idx[0]]), 4)
-        ru_lbl: Optional[DocumentType] = None
-        ru_conf: Optional[float] = None
+        ru_lbl: DocumentType | None = None
+        ru_conf: float | None = None
         if len(sorted_idx) > 1:
             ru_lbl  = DocumentType(self._le.inverse_transform([int(sorted_idx[1])])[0])
             ru_conf = round(float(proba[sorted_idx[1]]), 4)

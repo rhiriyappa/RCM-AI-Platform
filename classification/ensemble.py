@@ -1,12 +1,14 @@
 """classification/ensemble.py — three-tier ensemble classifier."""
 from __future__ import annotations
-import logging, time
-from typing import Optional
-from contracts.schemas import ClassificationResult, DocumentType, RawDocument
-from classification.rules      import apply_rules
+
+import logging
+import time
+
 from classification.embeddings import EmbeddingClassifier
 from classification.llm_classifier import LLMClassifier
-from classification.routing    import resolve_routing_queue
+from classification.routing import resolve_routing_queue
+from classification.rules import apply_rules
+from contracts.schemas import ClassificationResult, DocumentType, RawDocument
 
 logger = logging.getLogger(__name__)
 RULES_THRESHOLD     = 0.88
@@ -15,7 +17,7 @@ EMBEDDING_THRESHOLD = 0.72
 
 class EnsembleClassifier:
     def __init__(self, embedding_classifier: EmbeddingClassifier,
-                 llm_classifier: Optional[LLMClassifier] = None) -> None:
+                 llm_classifier: LLMClassifier | None = None) -> None:
         self._embedding = embedding_classifier
         self._llm       = llm_classifier
 

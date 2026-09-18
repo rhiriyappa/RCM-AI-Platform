@@ -1,7 +1,10 @@
 """ingestion/validator.py — schema validation and DLQ routing."""
 from __future__ import annotations
-import logging, re
+
+import logging
+import re
 from dataclasses import dataclass, field
+
 from contracts.schemas import ErrorEnvelope, RawDocument
 
 logger = logging.getLogger(__name__)

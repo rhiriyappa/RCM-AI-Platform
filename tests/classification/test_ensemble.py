@@ -1,16 +1,18 @@
 """tests/classification/test_ensemble.py"""
+from datetime import UTC, datetime
+
 import pytest
-from datetime import datetime, timezone
-from contracts.schemas import DocumentType, RawDocument, SourceType
+
 from classification.embeddings import EmbeddingClassifier
 from classification.ensemble import EnsembleClassifier
 from classification.llm_classifier import LLMClassifier
 from classification.training_data import get_training_texts_and_labels
+from contracts.schemas import DocumentType, RawDocument, SourceType
 
 
 def make_doc(text: str) -> RawDocument:
     return RawDocument(document_id="t1", source_id="s1", source_type=SourceType.FHIR_R4,
-                       ingested_at=datetime.now(timezone.utc), full_text=text)
+                       ingested_at=datetime.now(UTC), full_text=text)
 
 
 @pytest.fixture(scope="module")

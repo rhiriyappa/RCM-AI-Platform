@@ -1,6 +1,8 @@
 """observability/eval_pipeline.py — extraction quality evaluation and F1 scoring."""
 from __future__ import annotations
-import json, logging
+
+import json
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -30,8 +32,10 @@ def _score_field(actual: any, expected: any) -> float:
     if isinstance(expected, list):
         exp_set = {str(v).upper() for v in expected}
         act_set = {str(v).upper() for v in (actual or [])}
-        if not exp_set and not act_set: return 1.0
-        if not exp_set or not act_set:  return 0.0
+        if not exp_set and not act_set:
+            return 1.0
+        if not exp_set or not act_set:
+            return 0.0
         inter = exp_set & act_set
         p = len(inter) / len(act_set)
         r = len(inter) / len(exp_set)
@@ -41,7 +45,7 @@ def _score_field(actual: any, expected: any) -> float:
 
 def run_eval(gold_path: str | Path, extractor_fn, threshold: float = 0.80) -> EvalReport:
     gold_path = Path(gold_path)
-    records   = [json.loads(l) for l in gold_path.read_text().splitlines() if l.strip()]
+    records   = [json.loads(line) for line in gold_path.read_text().splitlines() if line.strip()]
     all_f1: list[float] = []
 
     for rec in records:

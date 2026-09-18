@@ -1,9 +1,12 @@
 """ingestion/adapters.py — unified source adapters."""
 from __future__ import annotations
+
 import json
 from dataclasses import dataclass, field
 from typing import Any
+
 import boto3
+
 from contracts.schemas import SourceType
 
 

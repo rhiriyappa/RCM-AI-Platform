@@ -1,8 +1,8 @@
 """orchestration/guardrails.py — output validation, PII redaction, hallucination checks."""
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
-
 
 _PII_PATTERNS = [
     (re.compile(r"\b\d{3}-\d{2}-\d{4}\b"),          "SSN"),

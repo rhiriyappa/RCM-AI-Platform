@@ -1,7 +1,11 @@
 """ingestion/sqs_fanout.py — SQS FIFO fan-out to downstream queues."""
 from __future__ import annotations
-import json, logging
+
+import json
+import logging
+
 import boto3
+
 from contracts.schemas import ErrorEnvelope, RawDocument
 
 logger = logging.getLogger(__name__)

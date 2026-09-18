@@ -1,7 +1,11 @@
 """classification/llm_classifier.py — LLM fallback classifier (Tier 3)."""
 from __future__ import annotations
-import json, logging, re
+
+import json
+import logging
+import re
 from typing import Any
+
 from contracts.schemas import DocumentType
 
 logger = logging.getLogger(__name__)

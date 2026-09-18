@@ -1,6 +1,7 @@
 """tests/extraction/test_engine.py"""
-import json, pytest
-from datetime import datetime, timezone
+import json
+from datetime import UTC, datetime
+
 from contracts.schemas import ClassificationResult, DocumentType, RawDocument, SourceType
 from extraction.engine import ExtractionEngine
 from extraction.enrichment import CodeValidator, ExtractionEnricher, MockNPILookup
@@ -8,7 +9,7 @@ from extraction.enrichment import CodeValidator, ExtractionEnricher, MockNPILook
 
 def doc(text="Claim denied CO-4.", doc_id="e1"):
     return RawDocument(document_id=doc_id, source_id="s1", source_type=SourceType.FHIR_R4,
-                       ingested_at=datetime.now(timezone.utc), full_text=text)
+                       ingested_at=datetime.now(UTC), full_text=text)
 
 
 def clf(doc_id="e1", doc_type=DocumentType.DENIAL_EOB):

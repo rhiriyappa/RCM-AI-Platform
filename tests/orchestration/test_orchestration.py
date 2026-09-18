@@ -1,10 +1,10 @@
 """tests/orchestration/test_orchestration.py"""
 import pytest
-from contracts.schemas import DocumentType
+
+from orchestration.fallback import with_fallback
+from orchestration.guardrails import check_json_schema, redact_pii, validate_output
+from orchestration.model_router import ModelTier, route
 from orchestration.prompt_registry import PromptRegistry
-from orchestration.model_router    import ModelTier, route
-from orchestration.guardrails      import check_json_schema, redact_pii, validate_output
-from orchestration.fallback        import with_fallback
 
 
 class TestPromptRegistry:

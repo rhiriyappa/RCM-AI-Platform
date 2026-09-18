@@ -1,8 +1,16 @@
 """tests/ingestion/test_adapters.py"""
-import pytest
 from unittest.mock import MagicMock
+
+import pytest
+
 from contracts.schemas import SourceType
-from ingestion.adapters import EDI837Adapter, FHIRBundleAdapter, HL7V2Adapter, S3FaxAdapter, WebhookAdapter
+from ingestion.adapters import (
+    EDI837Adapter,
+    FHIRBundleAdapter,
+    HL7V2Adapter,
+    S3FaxAdapter,
+    WebhookAdapter,
+)
 
 
 @pytest.fixture

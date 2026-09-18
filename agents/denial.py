@@ -1,8 +1,10 @@
 """agents/denial.py — denial appeal agent."""
 from __future__ import annotations
+
 import logging
-from contracts.schemas import AgentState, AgentStatus
+
 from agents.base import BaseAgent
+from contracts.schemas import AgentState, AgentStatus
 
 logger = logging.getLogger(__name__)
 
