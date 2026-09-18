@@ -14,7 +14,7 @@ from ingestion.sqs_fanout import SQSFanout
 from ingestion.validator import DocumentValidator
 
 log = structlog.get_logger()
-app = FastAPI(title="One Call Ingestor", version="1.0.0")
+app = FastAPI(title="RCM AI Platform Ingestor", version="1.0.0")
 _normalizer = Normalizer()
 _validator  = DocumentValidator()
 
