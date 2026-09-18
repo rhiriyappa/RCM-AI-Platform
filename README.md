@@ -6,7 +6,7 @@ RCM AI Platform is a production grade AI system for healthcare Revenue Cycle Man
 ## Objective
 RCM teams lose significant staff time to manual data entry: reading faxed referrals, re-keying denial letters, cross-checking prior auth requirements against payer criteria. The objective of this platform is to remove that manual step without removing human oversight — every document flows through deterministic validation and confidence-scored extraction before an agent is allowed to act on it, and anything below a confidence threshold is routed to a human-in-the-loop (HITL) queue rather than auto-processed. The goal is faster turnaround on prior auth and denial workflows while preserving a full audit trail for compliance review.
 
-## Steps taken
+## Steps Taken
 - **Deterministic ingestion first** — source specific adapters (fax/S3, HL7 v2, FHIR R4, EDI 837, webhook) normalize every input into one canonical RawDocument schema before anything probabilistic touches it; a validator gates malformed documents to a dead letter queue instead of letting them proceed.
 - **Confidence-gated classification and extraction** — a three tier classifier (rules → TF-IDF/logistic regression → LLM fallback) assigns a document type, then an LLM extraction engine pulls structured fields (patient, payer, codes, dates) with per field confidence scores, NPI/ICD-10/CPT validation, and OCR penalty adjustment.
 - **Cost-aware LLM orchestration** — a model router tiers requests across fast/standard/premium models by task complexity, backed by a versioned prompt registry, output guardrails (PII redaction, schema validation), and a fallback chain (LLM → rules → human queue) so no single provider failure stalls the pipeline.
@@ -14,7 +14,7 @@ RCM teams lose significant staff time to manual data entry: reading faxed referr
 - **Observability and eval built in from the start** — every LLM call records cost, latency, and token usage; an eval pipeline scores extraction F1 against a gold-labeled set so extraction quality is measurable, not assumed.
 - **CI/test discipline** — 161 unit tests plus LocalStack-backed integration tests, an 85% coverage gate, ruff/mypy enforcement, and a four stage GitHub Actions pipeline (lint, unit, integration, Docker build) all gating merges to main.
 
-## Expected outcome
+## Expected Outcome
 A document entering the system regardless of source format arrives at an agent as a validated, confidence scored, typed object, with low confidence or ambiguous cases automatically deferred to a human rather than silently mis-processed. The expected result is reduced manual rekeying for prior auth and denial workflows, a consistent and auditable decision trail per document (useful for compliance and payer disputes), and a cost/latency profile that scales with document complexity rather than defaulting every call to the most expensive model.
 
 [![CI](https://github.com/rhiriyappa/RCM-AI-Platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rhiriyappa/RCM-AI-Platform/actions/workflows/ci.yml)
