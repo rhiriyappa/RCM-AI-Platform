@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-005.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "referral",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "REFERRAL REQUEST",
+      "confidence": 99.0
+    },
+    {
+      "page": 1,
+      "text": "Patient: Jane Khan",
+      "confidence": 95.6
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1966-12-26",
+      "confidence": 96.4
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10160",
+      "confidence": 99.2
+    },
+    {
+      "page": 1,
+      "text": "Payer: Cigna (CIGNA-03)",
+      "confidence": 97.5
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1471331461",
+      "confidence": 99.5
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: E11.9, F41.1, M17.11",
+      "confidence": 97.2
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99285, 71046, 99214",
+      "confidence": 95.9
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-03-17",
+      "confidence": 98.1
+    },
+    {
+      "page": 2,
+      "text": "Reason for referral: persistent symptoms, specialist evaluation requested.",
+      "confidence": 98.7
+    }
+  ]
+}

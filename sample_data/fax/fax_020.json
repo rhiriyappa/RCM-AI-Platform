@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-020.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "referral",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "REFERRAL REQUEST",
+      "confidence": 96.3
+    },
+    {
+      "page": 1,
+      "text": "Patient: Linda Johnson",
+      "confidence": 97.7
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1969-06-10",
+      "confidence": 95.8
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10721",
+      "confidence": 96.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: Humana (HUMANA-04)",
+      "confidence": 98.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1888809292",
+      "confidence": 98.7
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: G43.909",
+      "confidence": 98.5
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99214, 99213",
+      "confidence": 96.5
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-10-22",
+      "confidence": 97.3
+    },
+    {
+      "page": 2,
+      "text": "Reason for referral: persistent symptoms, specialist evaluation requested.",
+      "confidence": 96.3
+    }
+  ]
+}

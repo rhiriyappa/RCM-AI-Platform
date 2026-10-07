@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0011"
+  },
+  "body": "{\"event\": \"prior_auth.submitted\", \"event_id\": \"evt-00011\", \"timestamp\": \"2024-03-03T09:11:00Z\", \"patient\": {\"name\": \"Fatima Nguyen\", \"dob\": \"1996-05-10\", \"mrn\": \"MRN-10385\"}, \"payer\": {\"id\": \"CIGNA-03\", \"name\": \"Cigna\"}, \"diagnosis_codes\": [\"J45.901\"], \"procedure_codes\": [\"45378\", \"99203\"], \"provider_npi\": \"1673198505\", \"claim_number\": \"CLM615754\", \"notes\": \"prior_auth.submitted for Fatima Nguyen; payer Cigna; ICD-10 J45.901; CPT 45378, 99203.\", \"auth_number\": \"PA1673198\"}"
+}

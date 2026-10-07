@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-011.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "prior_auth",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PRIOR AUTHORIZATION REQUEST",
+      "confidence": 89.2
+    },
+    {
+      "page": 1,
+      "text": "Patient: James Lopez",
+      "confidence": 92.2
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1972-08-23",
+      "confidence": 91.9
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10380",
+      "confidence": 89.6
+    },
+    {
+      "page": 1,
+      "text": "Payer: Cigna (CIGNA-03)",
+      "confidence": 89.4
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1451957985",
+      "confidence": 91.6
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: J45.901, M54.5",
+      "confidence": 92.4
+    },
+    {
+      "page": 2,
+      "text": "CPT: 80053, 71046",
+      "confidence": 89.4
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-02-09",
+      "confidence": 92.4
+    },
+    {
+      "page": 2,
+      "text": "Auth number: PA1451957",
+      "confidence": 92.1
+    },
+    {
+      "page": 2,
+      "text": "Status: PENDING REVIEW",
+      "confidence": 91.0
+    },
+    {
+      "page": 2,
+      "text": "Clinical justification attached on page 2.",
+      "confidence": 90.3
+    }
+  ]
+}

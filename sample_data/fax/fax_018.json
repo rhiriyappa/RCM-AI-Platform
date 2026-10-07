@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-018.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "clinical_note",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PROGRESS NOTE",
+      "confidence": 94.0
+    },
+    {
+      "page": 1,
+      "text": "Patient: Maria Garcia",
+      "confidence": 95.6
+    },
+    {
+      "page": 1,
+      "text": "DOB: 2003-04-09",
+      "confidence": 92.5
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10653",
+      "confidence": 95.2
+    },
+    {
+      "page": 1,
+      "text": "Payer: UnitedHealthcare (UHC-002)",
+      "confidence": 92.3
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1312690038",
+      "confidence": 94.6
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: M17.11, K21.9, F41.1",
+      "confidence": 94.1
+    },
+    {
+      "page": 2,
+      "text": "CPT: 71046, 99214",
+      "confidence": 93.1
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-12-16",
+      "confidence": 95.0
+    },
+    {
+      "page": 2,
+      "text": "Assessment and plan: continue current therapy, follow up in 4 weeks.",
+      "confidence": 94.2
+    }
+  ]
+}

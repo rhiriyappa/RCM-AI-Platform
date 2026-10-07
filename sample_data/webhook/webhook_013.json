@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0013"
+  },
+  "body": "{\"event\": \"eligibility.checked\", \"event_id\": \"evt-00013\", \"timestamp\": \"2024-11-22T09:13:00Z\", \"patient\": {\"name\": \"Fatima Patel\", \"dob\": \"1978-11-06\", \"mrn\": \"MRN-10462\"}, \"payer\": {\"id\": \"ANTHEM-05\", \"name\": \"Anthem\"}, \"diagnosis_codes\": [\"G43.909\"], \"procedure_codes\": [\"94640\", \"71046\", \"36415\"], \"provider_npi\": \"1497076952\", \"claim_number\": \"CLM936371\", \"notes\": \"eligibility.checked for Fatima Patel; payer Anthem; ICD-10 G43.909; CPT 94640, 71046, 36415.\"}"
+}

@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-019.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "eligibility",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "ELIGIBILITY VERIFICATION",
+      "confidence": 96.2
+    },
+    {
+      "page": 1,
+      "text": "Patient: Linda Miller",
+      "confidence": 93.5
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1948-06-02",
+      "confidence": 92.5
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10679",
+      "confidence": 93.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: Blue Cross Blue Shield of Texas (BCBS-TX)",
+      "confidence": 95.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1630724453",
+      "confidence": 93.3
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: E11.9, Z00.00",
+      "confidence": 93.2
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99214, 73721",
+      "confidence": 96.1
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-10-18",
+      "confidence": 95.1
+    },
+    {
+      "page": 2,
+      "text": "Coverage active. Copay $30. Deductible remaining $450.",
+      "confidence": 94.3
+    }
+  ]
+}

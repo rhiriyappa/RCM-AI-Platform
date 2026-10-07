@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "text/plain",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0024"
+  },
+  "body": "Ping from portal #24"
+}

@@ -18,6 +18,8 @@ _COST_MAP: dict[str, float] = {
     "claude-opus-4-6":           0.015,
     "gpt-4o":                    0.005,
     "gpt-4o-mini":               0.0002,
+    "llama3.2":                  0.0,   # local, via Ollama — on-box compute, no per-token cost
+    "mistral":                   0.0,   # local, via Ollama (Mistral 7B)
 }
 
 

@@ -1,0 +1,13 @@
+{
+  "s3_key": "fax/inbox/2024/fax-021.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "prior_auth",
+  "defect": "too_short",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "p.1",
+      "confidence": 90.2
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-024.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "eligibility",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "ELIGIBILITY VERIFICATION",
+      "confidence": 87.7
+    },
+    {
+      "page": 1,
+      "text": "Patient: Tom Lee",
+      "confidence": 89.0
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1974-04-08",
+      "confidence": 87.3
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10862",
+      "confidence": 90.5
+    },
+    {
+      "page": 1,
+      "text": "Payer: Blue Cross Blue Shield of Texas (BCBS-TX)",
+      "confidence": 88.1
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1616710305",
+      "confidence": 87.8
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: J45.901, G43.909",
+      "confidence": 87.4
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99285",
+      "confidence": 89.7
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-07-10",
+      "confidence": 89.0
+    },
+    {
+      "page": 2,
+      "text": "Coverage active. Copay $30. Deductible remaining $450.",
+      "confidence": 89.7
+    }
+  ]
+}

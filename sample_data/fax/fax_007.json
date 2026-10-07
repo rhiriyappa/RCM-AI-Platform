@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-007.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "denial_eob",
+  "defect": "low_ocr_confidence",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "EXPLANATION OF BENEFITS - CLAIM DENIED",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "Patient: Tom Hall",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "DOB: 2005-04-13",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10238",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "Payer: UnitedHealthcare (UHC-002)",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1411983601",
+      "confidence": 41.5
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: F41.1, G43.909, K21.9",
+      "confidence": 41.5
+    },
+    {
+      "page": 2,
+      "text": "CPT: 45378, 73721, 99213",
+      "confidence": 41.5
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-09-07",
+      "confidence": 41.5
+    },
+    {
+      "page": 2,
+      "text": "Claim CLM546788 denied CO-16: claim lacks information",
+      "confidence": 41.5
+    },
+    {
+      "page": 2,
+      "text": "Billed amount: $1138.66",
+      "confidence": 41.5
+    },
+    {
+      "page": 2,
+      "text": "Appeal must be filed within 60 days of this notice.",
+      "confidence": 41.5
+    }
+  ]
+}

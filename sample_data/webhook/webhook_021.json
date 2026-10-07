@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0021"
+  },
+  "body": "{\"event\": \"prior_auth.submitted\", \"event_id\": \"evt-00021\", \"timestamp\": \"2024-03-16T09:21:00Z\", \"patient\": {\"name\": \"Carlos Brown\", \"dob\": \"1955-10-20\", \"mrn\": \"MRN-10748\"}, \"payer\": {\"id\": \"MEDICARE-A\", \"name\": \"Medicare\"}, \"diagnosis_codes\": [\"G43.909\", \"K21.9\"], \"procedure_codes\": [\"99213\", \"71046\"], \"provider_npi\": \"1330163185\", \"claim_number\": \"CLM124929\", \"notes\": \"prior_auth.submitted for Carlos Brown; payer Medicare; ICD-10 G43.909, K21.9; CPT 99213, 71046.\", \"auth_number\": \"PA1330163\"}"
+}

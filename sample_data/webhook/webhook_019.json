@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0019"
+  },
+  "body": "{\"event\": \"note.uploaded\", \"event_id\": \"evt-00019\", \"timestamp\": \"2024-02-12T09:19:00Z\", \"patient\": {\"name\": \"Maria Brown\", \"dob\": \"1987-10-21\", \"mrn\": \"MRN-10683\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"E11.9\", \"Z00.00\"], \"procedure_codes\": [\"80053\", \"73721\", \"97110\"], \"provider_npi\": \"1213843612\", \"claim_number\": \"CLM961126\", \"notes\": \"note.uploaded for Maria Brown; payer UnitedHealthcare; ICD-10 E11.9, Z00.00; CPT 80053, 73721, 97110.\"}"
+}

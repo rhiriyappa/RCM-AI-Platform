@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0006"
+  },
+  "body": "{\"event\": \"prior_auth.submitted\", \"event_id\": \"evt-00006\", \"timestamp\": \"2024-08-04T09:06:00Z\", \"patient\": {\"name\": \"Jane Khan\", \"dob\": \"1940-12-06\", \"mrn\": \"MRN-10204\"}, \"payer\": {\"id\": \"AETNA-001\", \"name\": \"Aetna\"}, \"diagnosis_codes\": [\"I10\"], \"procedure_codes\": [\"71046\", \"45378\"], \"provider_npi\": \"1380956300\", \"claim_number\": \"CLM718411\", \"notes\": \"prior_auth.submitted for Jane Khan; payer Aetna; ICD-10 I10; CPT 71046, 45378.\", \"auth_number\": \"PA1380956\"}"
+}

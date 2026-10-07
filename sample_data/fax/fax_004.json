@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-004.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "eligibility",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "ELIGIBILITY VERIFICATION",
+      "confidence": 99.4
+    },
+    {
+      "page": 1,
+      "text": "Patient: Maria Wilson",
+      "confidence": 98.8
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1972-02-24",
+      "confidence": 97.3
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10121",
+      "confidence": 96.9
+    },
+    {
+      "page": 1,
+      "text": "Payer: Medicare (MEDICARE-A)",
+      "confidence": 97.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1630909864",
+      "confidence": 96.3
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: M17.11, N39.0, Z00.00",
+      "confidence": 99.1
+    },
+    {
+      "page": 2,
+      "text": "CPT: 93000, 94640, 99285",
+      "confidence": 97.6
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-07-19",
+      "confidence": 99.4
+    },
+    {
+      "page": 2,
+      "text": "Coverage active. Copay $30. Deductible remaining $450.",
+      "confidence": 97.5
+    }
+  ]
+}

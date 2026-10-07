@@ -1,4 +1,5 @@
-.PHONY: up down health test test-p1 test-p2 test-p3 test-p4 lint fmt eval clean
+.PHONY: up down health test test-p1 test-p2 test-p3 test-p4 test-pipeline lint fmt eval \
+        sample-data pipeline pipeline-slm clean
 
 COMPOSE = docker compose
 PYTEST  = PYTHONPATH=$(PWD) pytest
@@ -29,6 +30,19 @@ test-p3:
 
 test-p4:
 	$(PYTEST) tests/agents/ --cov=agents --cov-report=term-missing
+
+test-pipeline:
+	$(PYTEST) tests/pipeline/ tests/orchestration/test_langchain_chain.py \
+	  --cov=pipeline --cov=orchestration --cov=observability --cov-report=term-missing
+
+sample-data:
+	PYTHONPATH=$(PWD) python scripts/generate_sample_data.py
+
+pipeline:
+	PYTHONPATH=$(PWD) python -m pipeline.runner
+
+pipeline-slm:
+	PYTHONPATH=$(PWD) python -m pipeline.runner --llm slm
 
 lint:
 	ruff check .

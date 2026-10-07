@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0018"
+  },
+  "body": "{\"event\": \"eligibility.checked\", \"event_id\": \"evt-00018\", \"t"
+}

@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-009.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "eligibility",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "ELIGIBILITY VERIFICATION",
+      "confidence": 90.5
+    },
+    {
+      "page": 1,
+      "text": "Patient: David Wilson",
+      "confidence": 92.3
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1957-09-19",
+      "confidence": 91.5
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10301",
+      "confidence": 89.3
+    },
+    {
+      "page": 1,
+      "text": "Payer: Anthem (ANTHEM-05)",
+      "confidence": 92.9
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1075648841",
+      "confidence": 89.8
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: M17.11",
+      "confidence": 89.9
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99213, 99285",
+      "confidence": 92.0
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-08-01",
+      "confidence": 90.2
+    },
+    {
+      "page": 2,
+      "text": "Coverage active. Copay $30. Deductible remaining $450.",
+      "confidence": 90.1
+    }
+  ]
+}

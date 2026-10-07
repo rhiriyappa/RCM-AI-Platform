@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-008.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "clinical_note",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PROGRESS NOTE",
+      "confidence": 94.1
+    },
+    {
+      "page": 1,
+      "text": "Patient: Jane Khan",
+      "confidence": 96.2
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1981-10-18",
+      "confidence": 94.1
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10265",
+      "confidence": 95.3
+    },
+    {
+      "page": 1,
+      "text": "Payer: Humana (HUMANA-04)",
+      "confidence": 94.5
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1578187200",
+      "confidence": 94.7
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: G43.909, F41.1",
+      "confidence": 97.5
+    },
+    {
+      "page": 2,
+      "text": "CPT: 71046, 99213",
+      "confidence": 96.8
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-10-01",
+      "confidence": 94.8
+    },
+    {
+      "page": 2,
+      "text": "Assessment and plan: continue current therapy, follow up in 4 weeks.",
+      "confidence": 97.1
+    }
+  ]
+}

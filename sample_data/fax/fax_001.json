@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-001.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "prior_auth",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PRIOR AUTHORIZATION REQUEST",
+      "confidence": 93.3
+    },
+    {
+      "page": 1,
+      "text": "Patient: Maria Davis",
+      "confidence": 94.8
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1943-05-04",
+      "confidence": 93.0
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10015",
+      "confidence": 93.1
+    },
+    {
+      "page": 1,
+      "text": "Payer: Anthem (ANTHEM-05)",
+      "confidence": 93.4
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1523832096",
+      "confidence": 91.8
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: G43.909, R07.9",
+      "confidence": 93.1
+    },
+    {
+      "page": 2,
+      "text": "CPT: 93000, 99214",
+      "confidence": 93.6
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-07-20",
+      "confidence": 94.3
+    },
+    {
+      "page": 2,
+      "text": "Auth number: PA1523832",
+      "confidence": 91.5
+    },
+    {
+      "page": 2,
+      "text": "Status: PENDING REVIEW",
+      "confidence": 92.3
+    },
+    {
+      "page": 2,
+      "text": "Clinical justification attached on page 2.",
+      "confidence": 91.5
+    }
+  ]
+}

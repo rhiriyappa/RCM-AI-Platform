@@ -1,0 +1,79 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-018",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-18",
+        "name": [
+          {
+            "family": "Smith",
+            "given": [
+              "James"
+            ]
+          }
+        ],
+        "birthDate": "2002-09-14",
+        "identifier": [
+          {
+            "value": "MRN-10630"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-18",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "HUMANA-04"
+            },
+            "display": "Humana"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-18",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "F41.1"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "94640"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 3989.07,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0015"
+  },
+  "body": "{\"event\": \"referral.created\", \"event_id\": \"evt-00015\", \"timestamp\": \"2024-01-07T09:15:00Z\", \"patient\": {\"name\": \"Wei Hall\", \"dob\": \"1996-05-23\", \"mrn\": \"MRN-10520\"}, \"payer\": {\"id\": \"MEDICARE-A\", \"name\": \"Medicare\"}, \"diagnosis_codes\": [\"Z00.00\", \"N39.0\", \"E11.9\"], \"procedure_codes\": [\"73721\", \"45378\", \"80053\"], \"provider_npi\": \"1324985240\", \"claim_number\": \"CLM267796\", \"notes\": \"referral.created for Wei Hall; payer Medicare; ICD-10 Z00.00, N39.0, E11.9; CPT 73721, 45378, 80053.\"}"
+}

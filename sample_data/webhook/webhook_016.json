@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0016"
+  },
+  "body": "{\"event\": \"prior_auth.submitted\", \"event_id\": \"evt-00016\", \"timestamp\": \"2024-06-06T09:16:00Z\", \"patient\": {\"name\": \"Linda Khan\", \"dob\": \"1958-04-25\", \"mrn\": \"MRN-10576\"}, \"payer\": {\"id\": \"AETNA-001\", \"name\": \"Aetna\"}, \"diagnosis_codes\": [\"Z00.00\", \"M54.5\", \"G43.909\"], \"procedure_codes\": [\"99203\"], \"provider_npi\": \"1058135614\", \"claim_number\": \"CLM606107\", \"notes\": \"prior_auth.submitted for Linda Khan; payer Aetna; ICD-10 Z00.00, M54.5, G43.909; CPT 99203.\", \"auth_number\": \"PA1058135\"}"
+}

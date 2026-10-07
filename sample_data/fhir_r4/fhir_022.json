@@ -1,0 +1,90 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-022",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-22",
+        "name": [
+          {
+            "family": "Johnson",
+            "given": [
+              "Carlos"
+            ]
+          }
+        ],
+        "birthDate": "1951-09-01",
+        "identifier": [
+          {
+            "value": "MRN-10799"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-22",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "MEDICARE-A"
+            },
+            "display": "Medicare"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-22",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "J45.901"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "J06.9"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "99213"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 3855.77,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}
