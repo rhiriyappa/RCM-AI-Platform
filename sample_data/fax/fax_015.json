@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-015.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "referral",
+  "defect": "degraded_scan",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "REFERRAL REQUEST",
+      "confidence": 72.6
+    },
+    {
+      "page": 1,
+      "text": "Patient: David Hall",
+      "confidence": 71.8
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1993-03-27",
+      "confidence": 72.9
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10545",
+      "confidence": 69.1
+    },
+    {
+      "page": 1,
+      "text": "Payer: Anthem (ANTHEM-05)",
+      "confidence": 71.5
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1106327675",
+      "confidence": 70.9
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: J06.9, M17.11, M54.5",
+      "confidence": 71.9
+    },
+    {
+      "page": 2,
+      "text": "CPT: 93000, 71046",
+      "confidence": 70.3
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-11-14",
+      "confidence": 73.0
+    },
+    {
+      "page": 2,
+      "text": "Reason for referral: persistent symptoms, specialist evaluation requested.",
+      "confidence": 69.3
+    }
+  ]
+}

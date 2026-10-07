@@ -1,0 +1,112 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-003",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-3",
+        "name": [
+          {
+            "family": "Smith",
+            "given": [
+              "Linda"
+            ]
+          }
+        ],
+        "birthDate": "1973-01-27",
+        "identifier": [
+          {
+            "value": "MRN-10101"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-3",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "UHC-002"
+            },
+            "display": "UnitedHealthcare"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-3",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "J06.9"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "N39.0"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "80053"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "36415"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 3,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "73721"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 1178.46,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

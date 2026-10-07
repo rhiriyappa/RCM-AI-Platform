@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-012.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "denial_eob",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "EXPLANATION OF BENEFITS - CLAIM DENIED",
+      "confidence": 88.1
+    },
+    {
+      "page": 1,
+      "text": "Patient: Tom Lee",
+      "confidence": 91.8
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1990-01-08",
+      "confidence": 88.9
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10407",
+      "confidence": 90.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: Cigna (CIGNA-03)",
+      "confidence": 88.9
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1728185719",
+      "confidence": 91.2
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: M54.5",
+      "confidence": 90.3
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99203, 97110, 45378",
+      "confidence": 89.1
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-04-21",
+      "confidence": 88.6
+    },
+    {
+      "page": 2,
+      "text": "Claim CLM936565 denied PR-1: deductible amount",
+      "confidence": 90.8
+    },
+    {
+      "page": 2,
+      "text": "Billed amount: $3575.69",
+      "confidence": 88.2
+    },
+    {
+      "page": 2,
+      "text": "Appeal must be filed within 60 days of this notice.",
+      "confidence": 88.8
+    }
+  ]
+}

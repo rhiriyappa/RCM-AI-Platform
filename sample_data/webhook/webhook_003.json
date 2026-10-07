@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0003"
+  },
+  "body": "{\"event\": \"eligibility.checked\", \"event_id\": \"evt-00003\", \"timestamp\": \"2024-05-01T09:03:00Z\", \"patient\": {\"name\": \"David Clark\", \"dob\": \"1962-03-28\", \"mrn\": \"MRN-10079\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"I10\", \"M17.11\"], \"procedure_codes\": [\"99285\", \"93000\", \"99203\"], \"provider_npi\": \"1741571141\", \"claim_number\": \"CLM478735\", \"notes\": \"eligibility.checked for David Clark; payer UnitedHealthcare; ICD-10 I10, M17.11; CPT 99285, 93000, 99203.\"}"
+}

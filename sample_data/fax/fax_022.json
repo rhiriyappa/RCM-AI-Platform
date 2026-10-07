@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-022.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "denial_eob",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "EXPLANATION OF BENEFITS - CLAIM DENIED",
+      "confidence": 97.9
+    },
+    {
+      "page": 1,
+      "text": "Patient: Kevin Miller",
+      "confidence": 97.3
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1972-09-09",
+      "confidence": 98.3
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10799",
+      "confidence": 95.6
+    },
+    {
+      "page": 1,
+      "text": "Payer: Cigna (CIGNA-03)",
+      "confidence": 95.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1011280894",
+      "confidence": 96.3
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: J45.901, I10",
+      "confidence": 95.6
+    },
+    {
+      "page": 2,
+      "text": "CPT: 71046, 99213, 99285",
+      "confidence": 95.4
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-10-11",
+      "confidence": 96.2
+    },
+    {
+      "page": 2,
+      "text": "Claim CLM571696 denied PR-1: deductible amount",
+      "confidence": 97.0
+    },
+    {
+      "page": 2,
+      "text": "Billed amount: $2501.92",
+      "confidence": 96.5
+    },
+    {
+      "page": 2,
+      "text": "Appeal must be filed within 60 days of this notice.",
+      "confidence": 95.8
+    }
+  ]
+}

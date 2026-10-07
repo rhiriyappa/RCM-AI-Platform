@@ -1,0 +1,79 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-011",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-11",
+        "name": [
+          {
+            "family": "Lopez",
+            "given": [
+              "Linda"
+            ]
+          }
+        ],
+        "birthDate": "1970-12-16",
+        "identifier": [
+          {
+            "value": "MRN-10370"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-11",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "HUMANA-04"
+            },
+            "display": "Humana"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-11",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R07.9"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "71046"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 3818.38,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

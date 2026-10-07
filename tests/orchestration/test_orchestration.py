@@ -40,6 +40,24 @@ class TestModelRouter:
     def test_reasoning_premium(self):    assert route("generate", 200, require_reasoning=True).tier == ModelTier.PREMIUM
     def test_medium_standard(self):      assert route("extraction", 2000).tier == ModelTier.STANDARD
 
+    def test_prefer_local_routes_a_short_extraction_to_the_local_slm(self):
+        choice = route("extraction", 300, prefer_local=True)
+        assert choice.tier == ModelTier.LOCAL_SLM and choice.cost_per_1k == 0.0
+
+    def test_prefer_local_still_escalates_long_text_to_standard(self):
+        assert route("extraction", 2000, prefer_local=True).tier == ModelTier.STANDARD
+
+    def test_prefer_local_still_escalates_reasoning_to_premium(self):
+        choice = route("generate", 200, require_reasoning=True, prefer_local=True)
+        assert choice.tier == ModelTier.PREMIUM
+
+    def test_prefer_local_false_keeps_the_hosted_fast_tier(self):
+        assert route("classify", 100, prefer_local=False).tier == ModelTier.FAST
+
+    def test_local_slm_model_id_follows_the_env_var(self, monkeypatch):
+        monkeypatch.setenv("RCM_SLM_MODEL", "mistral")
+        assert route("classify", 100, prefer_local=True).model_id == "mistral"
+
 
 class TestGuardrails:
     def test_valid_output_passes(self):  assert validate_output("Valid output text").passed

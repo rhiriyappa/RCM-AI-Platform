@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0017"
+  },
+  "body": "{\"event\": \"claim.denied\", \"event_id\": \"evt-00017\", \"timestamp\": \"2024-06-13T09:17:00Z\", \"patient\": {\"name\": \"David Miller\", \"dob\": \"1939-07-15\", \"mrn\": \"MRN-10603\"}, \"payer\": {\"id\": \"CIGNA-03\", \"name\": \"Cigna\"}, \"diagnosis_codes\": [\"J06.9\", \"J45.901\", \"Z00.00\"], \"procedure_codes\": [\"93000\"], \"provider_npi\": \"1770962980\", \"claim_number\": \"CLM392057\", \"notes\": \"claim.denied for David Miller; payer Cigna; ICD-10 J06.9, J45.901, Z00.00; CPT 93000.\", \"denial\": {\"reason_code\": \"CO-50\", \"reason\": \"not medically necessary\", \"appeal_by\": \"2024-12-31\"}}"
+}

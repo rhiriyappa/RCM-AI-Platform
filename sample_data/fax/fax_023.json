@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-023.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "clinical_note",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PROGRESS NOTE",
+      "confidence": 98.5
+    },
+    {
+      "page": 1,
+      "text": "Patient: Carlos Nguyen",
+      "confidence": 96.4
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1986-02-03",
+      "confidence": 94.9
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10843",
+      "confidence": 94.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: UnitedHealthcare (UHC-002)",
+      "confidence": 98.1
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1835284837",
+      "confidence": 94.8
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: G43.909, J45.901, K21.9",
+      "confidence": 97.4
+    },
+    {
+      "page": 2,
+      "text": "CPT: 73721",
+      "confidence": 96.9
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-06-09",
+      "confidence": 95.8
+    },
+    {
+      "page": 2,
+      "text": "Assessment and plan: continue current therapy, follow up in 4 weeks.",
+      "confidence": 97.8
+    }
+  ]
+}

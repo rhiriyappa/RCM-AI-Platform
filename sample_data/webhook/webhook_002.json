@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0002"
+  },
+  "body": "{\"event\": \"claim.denied\", \"event_id\": \"evt-00002\", \"timestamp\": \"2024-03-01T09:02:00Z\", \"patient\": {\"name\": \"Linda Lee\", \"dob\": \"1936-12-07\", \"mrn\": \"MRN-10050\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"N39.0\"], \"procedure_codes\": [\"99214\"], \"provider_npi\": \"1149000378\", \"claim_number\": \"CLM105571\", \"notes\": \"claim.denied for Linda Lee; payer UnitedHealthcare; ICD-10 N39.0; CPT 99214.\", \"denial\": {\"reason_code\": \"CO-50\", \"reason\": \"not medically necessary\", \"appeal_by\": \"2024-12-31\"}}"
+}

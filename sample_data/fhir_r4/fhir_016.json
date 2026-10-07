@@ -1,0 +1,101 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-016",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-16",
+        "name": [
+          {
+            "family": "Khan",
+            "given": [
+              "Jane"
+            ]
+          }
+        ],
+        "birthDate": "2000-07-18",
+        "identifier": [
+          {
+            "value": "MRN-10585"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-16",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "MEDICARE-A"
+            },
+            "display": "Medicare"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-16",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M54.5"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "97110"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "99285"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 3,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "45378"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 2874.29,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

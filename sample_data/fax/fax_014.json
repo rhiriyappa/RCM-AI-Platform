@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-014.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "eligibility",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "ELIGIBILITY VERIFICATION",
+      "confidence": 92.6
+    },
+    {
+      "page": 1,
+      "text": "Patient: Samuel Smith",
+      "confidence": 90.8
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1974-02-28",
+      "confidence": 91.7
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10483",
+      "confidence": 93.9
+    },
+    {
+      "page": 1,
+      "text": "Payer: UnitedHealthcare (UHC-002)",
+      "confidence": 94.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1140006408",
+      "confidence": 92.9
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: Z00.00, E11.9",
+      "confidence": 93.1
+    },
+    {
+      "page": 2,
+      "text": "CPT: 73721, 94640",
+      "confidence": 92.6
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-01-19",
+      "confidence": 90.9
+    },
+    {
+      "page": 2,
+      "text": "Coverage active. Copay $30. Deductible remaining $450.",
+      "confidence": 90.4
+    }
+  ]
+}

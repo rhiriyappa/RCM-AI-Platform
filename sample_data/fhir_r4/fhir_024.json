@@ -1,0 +1,101 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-024",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-24",
+        "name": [
+          {
+            "family": "Clark",
+            "given": [
+              "Robert"
+            ]
+          }
+        ],
+        "birthDate": "1989-04-14",
+        "identifier": [
+          {
+            "value": "MRN-10855"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-24",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "BCBS-TX"
+            },
+            "display": "Blue Cross Blue Shield of Texas"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-24",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "F41.1"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M17.11"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "99214"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "97110"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 1088.93,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

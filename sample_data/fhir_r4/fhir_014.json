@@ -1,0 +1,79 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-014",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-14",
+        "name": [
+          {
+            "family": "Hall",
+            "given": [
+              "David"
+            ]
+          }
+        ],
+        "birthDate": "1992-05-08",
+        "identifier": [
+          {
+            "value": "MRN-10506"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-14",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "BCBS-TX"
+            },
+            "display": "Blue Cross Blue Shield of Texas"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-14",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M17.11"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "71046"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 1583.35,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0014"
+  },
+  "body": "{\"event\": \"note.uploaded\", \"event_id\": \"evt-00014\", \"timestamp\": \"2024-03-07T09:14:00Z\", \"patient\": {\"name\": \"Wei Nguyen\", \"dob\": \"1970-11-12\", \"mrn\": \"MRN-10504\"}, \"payer\": {\"id\": \"ANTHEM-05\", \"name\": \"Anthem\"}, \"diagnosis_codes\": [\"F41.1\", \"E11.9\"], \"procedure_codes\": [\"97110\", \"71046\", \"99285\"], \"provider_npi\": \"1556347983\", \"claim_number\": \"CLM977259\", \"notes\": \"note.uploaded for Wei Nguyen; payer Anthem; ICD-10 F41.1, E11.9; CPT 97110, 71046, 99285.\"}"
+}

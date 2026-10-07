@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-013.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "clinical_note",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PROGRESS NOTE",
+      "confidence": 95.4
+    },
+    {
+      "page": 1,
+      "text": "Patient: Fatima Miller",
+      "confidence": 94.5
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1992-04-17",
+      "confidence": 93.1
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10464",
+      "confidence": 95.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: Blue Cross Blue Shield of Texas (BCBS-TX)",
+      "confidence": 92.8
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1457735475",
+      "confidence": 92.1
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: R07.9, J06.9",
+      "confidence": 93.1
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99285, 36415",
+      "confidence": 93.8
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-05-05",
+      "confidence": 92.2
+    },
+    {
+      "page": 2,
+      "text": "Assessment and plan: continue current therapy, follow up in 4 weeks.",
+      "confidence": 92.7
+    }
+  ]
+}

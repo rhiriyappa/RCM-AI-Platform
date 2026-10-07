@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0008"
+  },
+  "body": ""
+}

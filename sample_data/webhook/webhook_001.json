@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0001"
+  },
+  "body": "{\"event\": \"prior_auth.submitted\", \"event_id\": \"evt-00001\", \"timestamp\": \"2024-07-18T09:01:00Z\", \"patient\": {\"name\": \"Linda Patel\", \"dob\": \"1980-12-27\", \"mrn\": \"MRN-10023\"}, \"payer\": {\"id\": \"MEDICARE-A\", \"name\": \"Medicare\"}, \"diagnosis_codes\": [\"M54.5\", \"G43.909\", \"I10\"], \"procedure_codes\": [\"99213\", \"99203\", \"99214\"], \"provider_npi\": \"1399210079\", \"claim_number\": \"CLM206927\", \"notes\": \"prior_auth.submitted for Linda Patel; payer Medicare; ICD-10 M54.5, G43.909, I10; CPT 99213, 99203, 99214.\", \"auth_number\": \"PA1399210\"}"
+}

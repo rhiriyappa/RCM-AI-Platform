@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-010.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "referral",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "REFERRAL REQUEST",
+      "confidence": 88.1
+    },
+    {
+      "page": 1,
+      "text": "Patient: Kevin Patel",
+      "confidence": 90.0
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1966-05-04",
+      "confidence": 88.7
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10358",
+      "confidence": 90.1
+    },
+    {
+      "page": 1,
+      "text": "Payer: Humana (HUMANA-04)",
+      "confidence": 89.2
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1171396602",
+      "confidence": 89.5
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: F41.1",
+      "confidence": 91.5
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99214, 99203",
+      "confidence": 89.6
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-03-22",
+      "confidence": 90.0
+    },
+    {
+      "page": 2,
+      "text": "Reason for referral: persistent symptoms, specialist evaluation requested.",
+      "confidence": 91.2
+    }
+  ]
+}

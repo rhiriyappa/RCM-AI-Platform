@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0007"
+  },
+  "body": "{\"event\": \"claim.denied\", \"event_id\": \"evt-00007\", \"timestamp\": \"2024-09-03T09:07:00Z\", \"patient\": {\"name\": \"Fatima Clark\", \"dob\": \"1982-05-02\", \"mrn\": \"MRN-10235\"}, \"payer\": {\"id\": \"BCBS-TX\", \"name\": \"Blue Cross Blue Shield of Texas\"}, \"diagnosis_codes\": [\"F41.1\"], \"procedure_codes\": [\"73721\", \"71046\", \"99203\"], \"provider_npi\": \"1365028764\", \"claim_number\": \"CLM427627\", \"notes\": \"claim.denied for Fatima Clark; payer Blue Cross Blue Shield of Texas; ICD-10 F41.1; CPT 73721, 71046, 99203.\", \"denial\": {\"reason_code\": \"CO-50\", \"reason\": \"not medically necessary\", \"appeal_by\": \"2024-12-31\"}}"
+}

@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-002.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "denial_eob",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "EXPLANATION OF BENEFITS - CLAIM DENIED",
+      "confidence": 97.1
+    },
+    {
+      "page": 1,
+      "text": "Patient: Kevin Smith",
+      "confidence": 94.5
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1992-05-24",
+      "confidence": 98.2
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10062",
+      "confidence": 98.2
+    },
+    {
+      "page": 1,
+      "text": "Payer: Aetna (AETNA-001)",
+      "confidence": 96.9
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1697444855",
+      "confidence": 96.8
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: J45.901, F41.1, M54.5",
+      "confidence": 94.9
+    },
+    {
+      "page": 2,
+      "text": "CPT: 99213",
+      "confidence": 94.4
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-11-07",
+      "confidence": 96.4
+    },
+    {
+      "page": 2,
+      "text": "Claim CLM542621 denied CO-4: procedure code inconsistent with modifier",
+      "confidence": 94.5
+    },
+    {
+      "page": 2,
+      "text": "Billed amount: $155.48",
+      "confidence": 95.1
+    },
+    {
+      "page": 2,
+      "text": "Appeal must be filed within 60 days of this notice.",
+      "confidence": 95.3
+    }
+  ]
+}

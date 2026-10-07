@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0005"
+  },
+  "body": "{\"event\": \"referral.created\", \"event_id\": \"evt-00005\", \"timestamp\": \"2024-07-19T09:05:00Z\", \"patient\": {\"name\": \"Maria Khan\", \"dob\": \"1995-12-06\", \"mrn\": \"MRN-10149\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"Z00.00\"], \"procedure_codes\": [\"80053\", \"99213\"], \"provider_npi\": \"1589555067\", \"claim_number\": \"CLM982097\", \"notes\": \"referral.created for Maria Khan; payer UnitedHealthcare; ICD-10 Z00.00; CPT 80053, 99213.\"}"
+}

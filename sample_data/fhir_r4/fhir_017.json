@@ -1,0 +1,123 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-017",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-17",
+        "name": [
+          {
+            "family": "Johnson",
+            "given": [
+              "Aisha"
+            ]
+          }
+        ],
+        "birthDate": "1966-01-02",
+        "identifier": [
+          {
+            "value": "MRN-10620"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-17",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "ANTHEM-05"
+            },
+            "display": "Anthem"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-17",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M17.11"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "I10"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 3,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "N39.0"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "99213"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "36415"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 3,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "97110"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 1069.21,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

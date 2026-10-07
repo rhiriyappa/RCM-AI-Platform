@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0022"
+  },
+  "body": "{\"event\": \"claim.denied\", \"event_id\": \"evt-00022\", \"timestamp\": \"2024-08-26T09:22:00Z\", \"patient\": {\"name\": \"Robert Wilson\", \"dob\": \"1991-04-10\", \"mrn\": \"MRN-10778\"}, \"payer\": {\"id\": \"ANTHEM-05\", \"name\": \"Anthem\"}, \"diagnosis_codes\": [\"N39.0\"], \"procedure_codes\": [\"97110\"], \"provider_npi\": \"1571836937\", \"claim_number\": \"CLM138548\", \"notes\": \"claim.denied for Robert Wilson; payer Anthem; ICD-10 N39.0; CPT 97110.\", \"denial\": {\"reason_code\": \"CO-50\", \"reason\": \"not medically necessary\", \"appeal_by\": \"2024-12-31\"}}"
+}

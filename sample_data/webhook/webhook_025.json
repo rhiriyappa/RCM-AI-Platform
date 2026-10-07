@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0025"
+  },
+  "body": "{\"event\": \"referral.created\", \"event_id\": \"evt-00025\", \"timestamp\": \"2024-07-22T09:25:00Z\", \"patient\": {\"name\": \"Samuel Wilson\", \"dob\": \"2004-04-01\", \"mrn\": \"MRN-10901\"}, \"payer\": {\"id\": \"ANTHEM-05\", \"name\": \"Anthem\"}, \"diagnosis_codes\": [\"J06.9\", \"Z00.00\"], \"procedure_codes\": [\"36415\", \"99285\", \"97110\"], \"provider_npi\": \"1922014459\", \"claim_number\": \"CLM993283\", \"notes\": \"referral.created for Samuel Wilson; payer Anthem; ICD-10 J06.9, Z00.00; CPT 36415, 99285, 97110.\"}"
+}

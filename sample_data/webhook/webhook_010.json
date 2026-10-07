@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0010"
+  },
+  "body": "{\"event\": \"referral.created\", \"event_id\": \"evt-00010\", \"timestamp\": \"2024-08-16T09:10:00Z\", \"patient\": {\"name\": \"James Hall\", \"dob\": \"1987-02-06\", \"mrn\": \"MRN-10346\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"M54.5\"], \"procedure_codes\": [\"94640\", \"99203\"], \"provider_npi\": \"1486571379\", \"claim_number\": \"CLM822300\", \"notes\": \"referral.created for James Hall; payer UnitedHealthcare; ICD-10 M54.5; CPT 94640, 99203.\"}"
+}

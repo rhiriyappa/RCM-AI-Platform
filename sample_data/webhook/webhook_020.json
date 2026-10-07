@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0020"
+  },
+  "body": "{\"event\": \"referral.created\", \"event_id\": \"evt-00020\", \"timestamp\": \"2024-05-16T09:20:00Z\", \"patient\": {\"name\": \"Samuel Wilson\", \"dob\": \"1935-07-04\", \"mrn\": \"MRN-10713\"}, \"payer\": {\"id\": \"HUMANA-04\", \"name\": \"Humana\"}, \"diagnosis_codes\": [\"M17.11\", \"E11.9\", \"F41.1\"], \"procedure_codes\": [\"73721\", \"80053\", \"99285\"], \"provider_npi\": \"1463516937\", \"claim_number\": \"CLM842704\", \"notes\": \"referral.created for Samuel Wilson; payer Humana; ICD-10 M17.11, E11.9, F41.1; CPT 73721, 80053, 99285.\"}"
+}

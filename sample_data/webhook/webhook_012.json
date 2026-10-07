@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0012"
+  },
+  "body": "{\"event\": \"claim.denied\", \"event_id\": \"evt-00012\", \"timestamp\": \"2024-05-25T09:12:00Z\", \"patient\": {\"name\": \"Aisha Miller\", \"dob\": \"2005-09-12\", \"mrn\": \"MRN-10409\"}, \"payer\": {\"id\": \"ANTHEM-05\", \"name\": \"Anthem\"}, \"diagnosis_codes\": [\"Z00.00\", \"J06.9\"], \"procedure_codes\": [\"99213\", \"94640\", \"71046\"], \"provider_npi\": \"1600559186\", \"claim_number\": \"CLM824443\", \"notes\": \"claim.denied for Aisha Miller; payer Anthem; ICD-10 Z00.00, J06.9; CPT 99213, 94640, 71046.\", \"denial\": {\"reason_code\": \"CO-50\", \"reason\": \"not medically necessary\", \"appeal_by\": \"2024-12-31\"}}"
+}

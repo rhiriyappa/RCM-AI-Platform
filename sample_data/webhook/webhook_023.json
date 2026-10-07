@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0023"
+  },
+  "body": "{\"event\": \"eligibility.checked\", \"event_id\": \"evt-00023\", \"timestamp\": \"2024-05-18T09:23:00Z\", \"patient\": {\"name\": \"David Khan\", \"dob\": \"1969-03-24\", \"mrn\": \"MRN-10823\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"J06.9\", \"G43.909\"], \"procedure_codes\": [\"99285\", \"73721\", \"99214\"], \"provider_npi\": \"1017365368\", \"claim_number\": \"CLM842420\", \"notes\": \"eligibility.checked for David Khan; payer UnitedHealthcare; ICD-10 J06.9, G43.909; CPT 99285, 73721, 99214.\"}"
+}

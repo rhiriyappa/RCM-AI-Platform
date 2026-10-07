@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0009"
+  },
+  "body": "{\"event\": \"note.uploaded\", \"event_id\": \"evt-00009\", \"timestamp\": \"2024-12-19T09:09:00Z\", \"patient\": {\"name\": \"Jane Lee\", \"dob\": \"1979-05-15\", \"mrn\": \"MRN-10316\"}, \"payer\": {\"id\": \"CIGNA-03\", \"name\": \"Cigna\"}, \"diagnosis_codes\": [\"M54.5\"], \"procedure_codes\": [\"99213\", \"97110\", \"71046\"], \"provider_npi\": \"1900256591\", \"claim_number\": \"CLM239226\", \"notes\": \"note.uploaded for Jane Lee; payer Cigna; ICD-10 M54.5; CPT 99213, 97110, 71046.\"}"
+}

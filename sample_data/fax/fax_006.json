@@ -1,0 +1,68 @@
+{
+  "s3_key": "fax/inbox/2024/fax-006.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "prior_auth",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PRIOR AUTHORIZATION REQUEST",
+      "confidence": 89.7
+    },
+    {
+      "page": 1,
+      "text": "Patient: Carlos Nguyen",
+      "confidence": 90.7
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1997-12-01",
+      "confidence": 93.3
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10200",
+      "confidence": 92.4
+    },
+    {
+      "page": 1,
+      "text": "Payer: Blue Cross Blue Shield of Texas (BCBS-TX)",
+      "confidence": 89.9
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1181026748",
+      "confidence": 90.4
+    },
+    {
+      "page": 1,
+      "text": "ICD-10: Z00.00, J06.9",
+      "confidence": 89.8
+    },
+    {
+      "page": 2,
+      "text": "CPT: 73721, 80053, 99203",
+      "confidence": 89.6
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-01-25",
+      "confidence": 92.6
+    },
+    {
+      "page": 2,
+      "text": "Auth number: PA1181026",
+      "confidence": 90.1
+    },
+    {
+      "page": 2,
+      "text": "Status: PENDING REVIEW",
+      "confidence": 91.6
+    },
+    {
+      "page": 2,
+      "text": "Clinical justification attached on page 2.",
+      "confidence": 91.2
+    }
+  ]
+}

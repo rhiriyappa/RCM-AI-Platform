@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-025.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "referral",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "REFERRAL REQUEST",
+      "confidence": 96.1
+    },
+    {
+      "page": 1,
+      "text": "Patient: Wei Garcia",
+      "confidence": 96.7
+    },
+    {
+      "page": 1,
+      "text": "DOB: 1975-10-10",
+      "confidence": 95.6
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10895",
+      "confidence": 93.7
+    },
+    {
+      "page": 1,
+      "text": "Payer: UnitedHealthcare (UHC-002)",
+      "confidence": 94.8
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1263171983",
+      "confidence": 93.6
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: M17.11",
+      "confidence": 92.9
+    },
+    {
+      "page": 2,
+      "text": "CPT: 73721, 36415, 99214",
+      "confidence": 94.8
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-04-13",
+      "confidence": 95.8
+    },
+    {
+      "page": 2,
+      "text": "Reason for referral: persistent symptoms, specialist evaluation requested.",
+      "confidence": 93.6
+    }
+  ]
+}

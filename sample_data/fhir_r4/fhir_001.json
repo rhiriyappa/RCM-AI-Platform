@@ -1,0 +1,90 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-001",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-1",
+        "name": [
+          {
+            "family": "Davis",
+            "given": [
+              "David"
+            ]
+          }
+        ],
+        "birthDate": "2004-03-12",
+        "identifier": [
+          {
+            "value": "MRN-10029"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-1",
+        "status": "active",
+        "payor": [
+          {
+            "identifier": {
+              "value": "HUMANA-04"
+            },
+            "display": "Humana"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "clm-1",
+        "status": "active",
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R07.9"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "J06.9"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "73721"
+                }
+              ]
+            }
+          }
+        ],
+        "total": {
+          "value": 3923.33,
+          "currency": "USD"
+        }
+      }
+    }
+  ]
+}

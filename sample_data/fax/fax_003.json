@@ -1,0 +1,58 @@
+{
+  "s3_key": "fax/inbox/2024/fax-003.pdf",
+  "content_type": "application/pdf",
+  "intended_type": "clinical_note",
+  "defect": "",
+  "blocks": [
+    {
+      "page": 1,
+      "text": "PROGRESS NOTE",
+      "confidence": 89.2
+    },
+    {
+      "page": 1,
+      "text": "Patient: Fatima Smith",
+      "confidence": 89.1
+    },
+    {
+      "page": 1,
+      "text": "DOB: 2002-04-25",
+      "confidence": 90.7
+    },
+    {
+      "page": 1,
+      "text": "MRN: MRN-10088",
+      "confidence": 89.4
+    },
+    {
+      "page": 1,
+      "text": "Payer: Cigna (CIGNA-03)",
+      "confidence": 89.9
+    },
+    {
+      "page": 1,
+      "text": "Provider NPI: 1994828918",
+      "confidence": 89.3
+    },
+    {
+      "page": 2,
+      "text": "ICD-10: I10, F41.1, Z00.00",
+      "confidence": 89.9
+    },
+    {
+      "page": 2,
+      "text": "CPT: 93000, 97110, 94640",
+      "confidence": 89.1
+    },
+    {
+      "page": 2,
+      "text": "Date of service: 2024-09-21",
+      "confidence": 88.4
+    },
+    {
+      "page": 2,
+      "text": "Assessment and plan: continue current therapy, follow up in 4 weeks.",
+      "confidence": 91.3
+    }
+  ]
+}

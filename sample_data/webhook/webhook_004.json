@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "x-source-system": "partner-portal",
+    "x-signature": "sha256=demo0004"
+  },
+  "body": "{\"event\": \"note.uploaded\", \"event_id\": \"evt-00004\", \"timestamp\": \"2024-08-23T09:04:00Z\", \"patient\": {\"name\": \"Carlos Garcia\", \"dob\": \"1953-05-03\", \"mrn\": \"MRN-10121\"}, \"payer\": {\"id\": \"UHC-002\", \"name\": \"UnitedHealthcare\"}, \"diagnosis_codes\": [\"J06.9\", \"M54.5\", \"Z00.00\"], \"procedure_codes\": [\"36415\", \"71046\", \"99214\"], \"provider_npi\": \"1332814793\", \"claim_number\": \"CLM431133\", \"notes\": \"note.uploaded for Carlos Garcia; payer UnitedHealthcare; ICD-10 J06.9, M54.5, Z00.00; CPT 36415, 71046, 99214.\"}"
+}
